@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_margin="5dp">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cardView"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="1dp"
+        app:cardBackgroundColor="@color/item">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="9">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_star"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:weightSum="2"
+                android:orientation="vertical">
+                <TextView
+                    android:singleLine="true"
+                    android:textSize="12sp"
+                    android:gravity="bottom|center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/text"
+                    android:text="12/06/1997"
+                    android:id="@+id/tvDate"/>
+                <TextView
+                    android:singleLine="true"
+                    android:textSize="12sp"
+                    android:gravity="top|center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="20:30"
+                    android:textColor="@color/text"
+                    android:id="@+id/tvTime"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingLeft="10dp"
+                android:layout_width="0dp"
+                android:layout_weight="5.2"
+                android:layout_height="match_parent"
+                android:weightSum="2"
+                android:orientation="vertical"
+                tools:ignore="RtlSymmetry">
+                <TextView
+                    android:textColor="#e9fdfd"
+                    android:gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/name_of_note"
+                    android:id="@+id/tvName"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    android:singleLine="true"/>
+                <TextView
+                    android:textColor="#b3b3b3"
+                    android:gravity="top"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textSize="14dp"
+                    android:text="@string/detail_of_note"
+                    android:id="@+id/tvDetail"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <CheckBox
+                android:gravity="left|center_vertical"
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:layout_height="match_parent"
+                android:id="@+id/check_list"
+                android:visibility="visible"/>
+
+
+            <Spinner
+                android:gravity="right"
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:id="@+id/spinner"
+                android:visibility="visible"/>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
