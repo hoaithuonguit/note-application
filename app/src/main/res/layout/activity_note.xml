@@ -138,15 +138,7 @@
         android:layout_weight="1.5"
         android:orientation="horizontal"
         android:weightSum="2">
-        <Button
-            android:textStyle="bold"
-            android:id="@+id/btnDone"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:text="@string/finish"
-            android:textColor="#ffffff"
-            android:background="#00ffffff"/>
+
         <Button
             android:textStyle="bold"
             android:textColor="#ffffff"
@@ -156,6 +148,16 @@
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:text="@string/cancel"/>
+
+        <Button
+            android:textStyle="bold"
+            android:id="@+id/btnDone"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="@string/finish"
+            android:textColor="#ffffff"
+            android:background="#00ffffff"/>
     </LinearLayout>
 
 

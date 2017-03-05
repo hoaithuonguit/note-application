@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:minHeight="?attr/actionBarSize"
-    android:background="#1e3235"
+    android:background="#363d41"
     app:theme="@style/Base.ThemeOverlay.AppCompat.ActionBar"
     android:id="@+id/toolbar">
 
@@ -36,7 +36,7 @@
             android:text="@string/app_name"
             android:textSize="18dp"
             android:textStyle="bold"
-            android:textColor="#00FFF5"
+            android:textColor="#ffffff"
             android:id="@+id/tvAppName"
             android:paddingLeft="30dp"/>
 

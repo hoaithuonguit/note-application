@@ -53,7 +53,7 @@ public class MainActivity extends LocalizationActivity implements View.OnLongCli
 
     private ImageView imghome, imgback;
 
-    private TextView tvAppName, tvCounter;
+    private TextView tvAppName, tvCounter, tv_no_note;
 
     public static NoteAdapter adater;
     public static NoteDataBase noteDataBase;
@@ -106,6 +106,7 @@ public class MainActivity extends LocalizationActivity implements View.OnLongCli
 
     private void loadDataNote() {
         adater.refreshData();
+        isEmptyNoteAction();
     }
 
 
@@ -129,7 +130,19 @@ public class MainActivity extends LocalizationActivity implements View.OnLongCli
         imghome= (ImageView) findViewById(R.id.imghome);
         tvAppName= (TextView) findViewById(R.id.tvAppName);
         tvCounter= (TextView) findViewById(R.id.tvCounter);
+        tv_no_note= (TextView) findViewById(R.id.tv_no_note);
         rvNote= (RecyclerView) findViewById(R.id.rvNote);
+    }
+
+    private void isEmptyNoteAction(){
+        if(list.isEmpty()){
+            tv_no_note.setVisibility(View.VISIBLE);
+            rvNote.setVisibility(GONE);
+        }
+        else {
+            tv_no_note.setVisibility(View.GONE);
+            rvNote.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
@@ -158,6 +171,7 @@ public class MainActivity extends LocalizationActivity implements View.OnLongCli
 
     private void viewNoteOfDay() {
         publicDateTime.viewNoteOfDay(this);
+        isEmptyNoteAction();
     }
 
     private void openSetting() {
@@ -201,6 +215,7 @@ public class MainActivity extends LocalizationActivity implements View.OnLongCli
 
                 adater.removeListSelected(list_selected);
                 onActionModeOff();
+                isEmptyNoteAction();
                 dialog_confirm.dismiss();
 
             }
@@ -336,6 +351,7 @@ public class MainActivity extends LocalizationActivity implements View.OnLongCli
                             note_result.createPendingIntent(this));
 
                     Toast.makeText(this,getResources().getString(R.string.added),Toast.LENGTH_LONG).show();
+                    isEmptyNoteAction();
                 }
 
                 if (requestCode == REQUES_UPDATE) {
@@ -389,6 +405,7 @@ public class MainActivity extends LocalizationActivity implements View.OnLongCli
                 alarmManager.cancel(list.get(position).createPendingIntent(MainActivity.this));
 
                 adater.deleteNote(list.get(position));
+                isEmptyNoteAction();
 
                 dialog_confirm.dismiss();
             }

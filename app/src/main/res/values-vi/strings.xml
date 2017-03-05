@@ -1,7 +1,7 @@
 <resources>
 
 
-    <string name="app_name">Ứng dụng ghi chú</string>
+    <string name="app_name">Ghi chú</string>
 
 
     <!--Text of Activity Note and Activity Info Of Note-->
@@ -59,6 +59,9 @@
     <string name="language">Ngôn ngữ</string>
 
     <!--Text for Notification-->
-    <string name="notification">Thông báo từ Ứng dụng ghi chú</string>
+    <string name="notification">Bạn có sự kiện đang diễn ra</string>
     <string name="notification_detail">Chọn vào để xem chi tiết</string>
+
+    <!--Text of Main-->
+    <string name="no_note">Bạn không có ghi chú nào</string>
 </resources>
