@@ -3,8 +3,10 @@ package uitstart.uit.noteapp.activity;
 import android.app.AlarmManager;
 import android.app.Dialog;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -132,6 +134,10 @@ public class MainActivity extends LocalizationActivity implements View.OnLongCli
         tvCounter= (TextView) findViewById(R.id.tvCounter);
         tv_no_note= (TextView) findViewById(R.id.tv_no_note);
         rvNote= (RecyclerView) findViewById(R.id.rvNote);
+
+
+        Drawable drawable= ContextCompat.getDrawable(getApplicationContext(),R.drawable.ic_menu);
+        toolbar.setOverflowIcon(drawable);
     }
 
     private void isEmptyNoteAction(){
